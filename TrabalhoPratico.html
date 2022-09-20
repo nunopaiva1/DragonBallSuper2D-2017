@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Trabalho Pratico</title>
+	<meta charset="utf-8">
+    <style type="text/css">
+        body{
+            margin: 0;
+            background: #2B2E31;
+        }
+    </style>
+    
+    <script type="text/javascript" src="js/phaser.min.js"></script>
+    
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/preload.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/info.js"></script>
+    <script type="text/javascript" src="js/ojogo.js"></script>
+    <script type="text/javascript" src="js/gameover.js"></script>
+
+    <script>
+        (function(){
+            var game = new Phaser.Game(800,600,Phaser.CANVAS,"game");
+            
+            game.state.add("Init", init);
+            game.state.add("Preload", preload);
+            game.state.add("Menu", menu);
+            game.state.add("oJogo", oJogo);
+            game.state.add("Info", info);
+            game.state.add("GameOver", gameover);
+            
+            game.state.start("Init");
+            
+        })();
+        
+    </script>
+    
+</head>
+    
+<body>
+
+</body>
